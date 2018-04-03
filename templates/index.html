@@ -1,4 +1,4 @@
-{% extends 'base.html'}
+{% extends 'base.html' %}
 
 {% block display %}
 
@@ -8,7 +8,7 @@
             <tbody><tr>
                 <td><label for="username">Username</label></td>
                 <td>
-                    <input name="username" type="text" value="">
+                    <input name="username" type="text" value={{username}}>
                     {% if un_error != "" %}
                     <span class="error">{{un_error}}</span>
                     {% endif %}
@@ -19,7 +19,7 @@
                 <td>
                     <input name="password" type="password">
                     {% if pw_error != "" %}
-                    <span class="error"></span>
+                    <span class="error">{{pw_error}}</span>
                     {% endif %}
                 </td>
             </tr>
@@ -28,16 +28,16 @@
                 <td>
                     <input name="verify" type="password">
                     {% if pv_error != "" %}
-                    <span class="error"></span>
+                    <span class="error">{{pv_error}}</span>
                     {% endif %}
                 </td>
             </tr>
             <tr>
                 <td><label for="email">Email (optional)</label></td>
                 <td>
-                    <input name="email" value="">
+                    <input name="email" value={{email}}>
                     {% if em_error != "" %}
-                    <span class="error"></span>
+                    <span class="error">{{em_error}}</span>
                     {% endif %}
                 </td>
             </tr>
@@ -45,4 +45,4 @@
         <input type="submit">
     </form>
 
-    {% endblock %}
+{% endblock %}
