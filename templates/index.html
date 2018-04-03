@@ -9,36 +9,28 @@
                 <td><label for="username">Username</label></td>
                 <td>
                     <input name="username" type="text" value={{username}}>
-                    {% if un_error != "" %}
-                    <span class="error">{{un_error}}</span>
-                    {% endif %}
+                    <span class="error">{% if un_error != "" %}{{un_error}}{% endif %}</span>
                 </td>
             </tr>
             <tr>
                 <td><label for="password">Password</label></td>
                 <td>
                     <input name="password" type="password">
-                    {% if pw_error != "" %}
-                    <span class="error">{{pw_error}}</span>
-                    {% endif %}
+                    <span class="error">{% if pw_error != "" %}{{pw_error}}{% endif %}</span>
                 </td>
             </tr>
             <tr>
                 <td><label for="verify">Verify Password</label></td>
                 <td>
                     <input name="verify" type="password">
-                    {% if pv_error != "" %}
-                    <span class="error">{{pv_error}}</span>
-                    {% endif %}
+                    <span class="error">{% if pv_error != "" %}{{pv_error}}{% endif %}</span>
                 </td>
             </tr>
             <tr>
                 <td><label for="email">Email (optional)</label></td>
                 <td>
-                    <input name="email" value={{email}}>
-                    {% if em_error != "" %}
-                    <span class="error">{{em_error}}</span>
-                    {% endif %}
+                    <input name="email" type= "text" value={{email}}>
+                    <span class="error">{% if em_error != "" %}{{em_error}}{% endif %}</span>
                 </td>
             </tr>
         </tbody></table>

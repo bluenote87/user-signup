@@ -49,6 +49,8 @@ def validate():
         pv_error = "Passwords don't match"
 
     if em:
+        if len(em) < 3 or len(em) > 20:
+            em_error = "That's not a valid email"
         em_ver = re.search(r'\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b', em, re.I)
         if not em_ver:
             em_error = "That's not a valid email"
